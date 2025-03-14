@@ -1,4 +1,104 @@
-# kevinhendinata.github.io
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import React from "react";
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/Bz0mQ6tpmLVe1MWpTFMVk2/Personal-Portfolio-Free-Template-(Community)-(Community)?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+import { AboutMeSection } from "./AboutMeSection";
+import { BlogSection } from "./BlogSection";
+import { CallToActionSection } from "./CallToActionSection";
+import { HapyyClientsByAnima } from "./HapyyClientsByAnima";
+// Import all sections
+import { HeroSection } from "./HeroSection";
+import { PortfolioSection } from "./PortfolioSection";
+import { ServicesSection } from "./ServicesSection";
+import { TestimonialSection } from "./TestimonialSection";
+import { WorkProcessSection } from "./WorkProcessSection";
 
+// Stats data for the stats card
+const statsData = [
+  { value: "2 Y.", label: "Experience" },
+  { value: "250+", label: "Project Completed" },
+  { value: "58", label: "Happy Client" },
+];
+
+export default function Homepage(): JSX.Element {
+  return (
+    <div className="bg-white flex flex-row justify-center w-full">
+      <div className="bg-white overflow-hidden w-full relative">
+        {/* Background elements */}
+        <div className="relative w-full">
+          <div className="w-[871px] h-[871px] absolute top-[4093px] left-[178px] bg-[#da4df166] rounded-[435.61px] rotate-[-130.44deg] blur-[500px]" />
+          <div className="w-[1044px] h-[1044px] absolute top-[4207px] left-[2616px] bg-[#c4f5e9b2] rounded-[522.16px] rotate-[-130.44deg] blur-[600px]" />
+
+          {/* Background image */}
+          <img
+            className="w-full h-auto object-cover absolute top-0 left-0 z-0"
+            alt="Background"
+            src=""
+          />
+
+          {/* Header image */}
+          <img
+            className="w-full h-24 absolute top-0 left-0 z-10"
+            alt="Header frame"
+            src=""
+          />
+
+          {/* Main content container */}
+          <div className="relative z-10">
+            {/* Hero section with decorative elements */}
+            <section className="relative">
+              <HeroSection />
+
+              {/* Decorative elements */}
+              <div className="absolute w-[133px] h-1.5 top-[479px] right-[434px] bg-[#ffc7c7]" />
+              <div className="absolute w-[92px] h-1.5 top-[479px] right-[298px] bg-[#ffc7c7]" />
+
+              {/* Hero image */}
+              <img
+                className="absolute w-[768px] h-[868px] top-[113px] right-0"
+                alt="Profile"
+                src=""
+              />
+
+              {/* Stats card */}
+              <Card className="inline-flex items-center justify-center gap-3 absolute top-[752px] left-[calc(50%-300px)] bg-[#edd8ff80] rounded-md border border-solid border-graywhite">
+                <CardContent className="flex items-center p-0">
+                  {statsData.map((stat, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && (
+                        <Separator
+                          orientation="vertical"
+                          className="h-[106px] w-[3px] mx-3"
+                        />
+                      )}
+                      <div className="flex flex-col items-center gap-2">
+                        <div className="w-[200px] font-heading-03 font-[number:var(--heading-03-font-weight)] text-gray-700 text-[length:var(--heading-03-font-size)] text-center tracking-[var(--heading-03-letter-spacing)] leading-[var(--heading-03-line-height)] [font-style:var(--heading-03-font-style)]">
+                          {stat.value}
+                        </div>
+                        <div className="w-[200px] font-body-regular-400 font-[number:var(--body-regular-400-font-weight)] text-gray-500 text-[length:var(--body-regular-400-font-size)] text-center tracking-[var(--body-regular-400-letter-spacing)] leading-[var(--body-regular-400-line-height)] [font-style:var(--body-regular-400-font-style)]">
+                          {stat.label}
+                        </div>
+                      </div>
+                    </React.Fragment>
+                  ))}
+                </CardContent>
+              </Card>
+            </section>
+
+            {/* Main content sections */}
+            <div className="flex flex-col w-full">
+              <AboutMeSection />
+              <PortfolioSection />
+              <CallToActionSection />
+              <BlogSection />
+              <ServicesSection />
+              <HapyyClientsByAnima />
+              <TestimonialSection />
+              <WorkProcessSection />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
