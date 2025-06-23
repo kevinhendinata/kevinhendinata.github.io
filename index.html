@@ -44,6 +44,7 @@
         .project-card {
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             border-left: 4px solid transparent;
+            cursor: pointer;
         }
         .project-card:hover {
             transform: translateY(-5px);
@@ -101,72 +102,71 @@
         <div class="container">
             <h2 class="text-2xl font-bold mb-6 title-color">RESEARCH & PROJECTS</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Project cards here (same as before) -->
                 <!-- Project 1 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal1')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal1">
                     <h3 class="text-xl font-bold mb-2">Acoustic Analysis for Green Mosque</h3>
-                    <p class="text-gray-600 mb-4">Comprehensive acoustic consultation for mosque renovation in South Tangerang.</p>
+                    <p class="text-gray-600 mb-4">Acoustic consultation for mosque renovation focusing on interior materials and sound systems.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal2')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal2">
                     <h3 class="text-xl font-bold mb-2">Parametric Study on Plenum Windows</h3>
                     <p class="text-gray-600 mb-4">Evaluation of acoustic performance in window design.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal3')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal3">
                     <h3 class="text-xl font-bold mb-2">Transparent Wood Research</h3>
                     <p class="text-gray-600 mb-4">Innovative material study for sustainable architecture.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal4')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal4">
                     <h3 class="text-xl font-bold mb-2">Energy Efficiency Roadmap</h3>
                     <p class="text-gray-600 mb-4">National strategy for building energy optimization.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 5 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal5')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal5">
                     <h3 class="text-xl font-bold mb-2">Green Building Certification</h3>
                     <p class="text-gray-600 mb-4">Energy modeling for UGM Innovation Center.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 6 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal6')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal6">
                     <h3 class="text-xl font-bold mb-2">Smart Windows Technology</h3>
                     <p class="text-gray-600 mb-4">Review of dynamic glazing systems.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 7 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal7')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal7">
                     <h3 class="text-xl font-bold mb-2">Coiled-Up Silencer Tubes</h3>
                     <p class="text-gray-600 mb-4">Urban noise insulation solutions.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 8 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal8')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal8">
                     <h3 class="text-xl font-bold mb-2">Solar Street Lighting</h3>
                     <p class="text-gray-600 mb-4">Renewable energy implementation.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 9 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal9')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal9">
                     <h3 class="text-xl font-bold mb-2">IoT Mushroom Cultivation</h3>
                     <p class="text-gray-600 mb-4">Environmental monitoring system.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 10 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal10')">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal10">
                     <h3 class="text-xl font-bold mb-2">Environmental Literacy Study</h3>
                     <p class="text-gray-600 mb-4">Survey on energy awareness in Indonesia.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
@@ -210,15 +210,13 @@
         </div>
     </footer>
 
-    <!-- Modals -->
     <!-- Profile Modal -->
     <div id="profileModal" class="modal">
         <div class="modal-content relative">
-            <span class="close-btn" onclick="closeModal('profileModal')">&times;</span>
+            <span class="close-btn">&times;</span>
             <h2 class="text-2xl font-bold mb-4">FULL PROFILE</h2>
             <p class="mb-4">Laurentius Kevin Hendinata is an engineer specializing in the intersection of building physics and sustainable energy, with particular expertise in acoustic performance of building openings. The research work encompasses both theoretical modeling and practical applications, supported by multiple academic awards and grants.</p>
             <p class="mb-4">A Bachelor of Engineering degree in Engineering Physics was completed at Universitas Gadjah Mada, where recognition as the Faculty of Engineering's Most Outstanding Student was received. Currently, a joint master's degree in acoustic engineering is being pursued through the prestigious Erasmus Mundus WAVES program, spanning three European universities.</p>
-            <p class="mb-4">Professional affiliations include membership in the Society of Façade Engineering, American Physical Society, and National Society of Professional Engineers. The research portfolio demonstrates consistent engagement with both fundamental investigations and applied solutions for sustainable built environments.</p>
             <p>Collaboration opportunities are welcomed in the fields of architectural acoustics, building physics, and energy-efficient design.</p>
         </div>
     </div>
@@ -226,51 +224,69 @@
     <!-- Project Modals -->
     <div id="modal1" class="modal">
         <div class="modal-content relative">
-            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            <span class="close-btn">&times;</span>
             <h2 class="text-2xl font-bold mb-4">Acoustic Analysis for Green Mosque Dzarratul Muthmainnah</h2>
-            <p class="mb-4">This comprehensive acoustic consultation was conducted for the renovation of Dzarratul Muthmainnah Green Mosque in South Tangerang. The project focused on optimizing speech intelligibility and worship experience through systematic evaluation of room acoustics and sound system performance.</p>
-            <p class="mb-4">Detailed measurements of reverberation time, speech transmission index, and background noise levels were performed. Computational modeling was then utilized to simulate various design scenarios, leading to evidence-based recommendations for acoustic treatment placement and sound system configuration.</p>
-            <p>The project outcomes have been implemented in the mosque's renovation, serving as a model for integrating acoustic considerations into religious architecture in tropical climates.</p>
+            <p class="mb-4">This project provided comprehensive acoustic consultation for the renovation of the Dzarratul Muthmainnah Green Mosque in South Tangerang. The primary focus was optimizing interior acoustics through material selection and sound system design.</p>
+            <p class="mb-4">Key recommendations included:</p>
+            <ul class="list-disc pl-5 mb-4">
+                <li>Strategic placement of sound-absorbing materials in the prayer hall to control reverberation</li>
+                <li>Selection of surface finishes that balance aesthetic requirements with acoustic performance</li>
+                <li>Specialized acoustic treatment for the podcast recording space to ensure speech clarity</li>
+                <li>Custom design of the public address system for optimal speech intelligibility</li>
+            </ul>
+            <p>The implementation resulted in significantly improved worship experience with clear audio throughout the prayer spaces and professional-quality recording capabilities in the podcast studio.</p>
         </div>
     </div>
 
-    <!-- Add remaining project modals here (modal2 to modal10) -->
-    <!-- Each modal follows the same structure as modal1 above -->
-
+    <!-- Remaining project modals would follow same structure -->
+    
     <script>
-        // Fixed modal functions
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-            event.stopPropagation(); // Prevents event bubbling
-        }
+        // Improved modal handling
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers to all project cards
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const modalId = this.getAttribute('data-modal');
+                    if (modalId) {
+                        document.getElementById(modalId).style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Profile modal trigger
-        document.getElementById('openProfileModal').addEventListener('click', function() {
-            openModal('profileModal');
-        });
-
-        // Close modal when clicking outside
-        window.addEventListener('click', function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Close with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                document.querySelectorAll('.modal').forEach(modal => {
-                    modal.style.display = 'none';
+            // Add click handlers to close buttons
+            document.querySelectorAll('.close-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.closest('.modal').style.display = 'none';
                     document.body.style.overflow = 'auto';
                 });
-            }
+            });
+
+            // Close modals when clicking outside content
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+
+            // Profile modal button
+            document.getElementById('openProfileModal').addEventListener('click', function() {
+                document.getElementById('profileModal').style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Close with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('.modal').forEach(modal => {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    });
+                }
+            });
         });
     </script>
 </body>
