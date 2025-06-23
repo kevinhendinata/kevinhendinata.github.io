@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Onlineku</title>
+    <title>Laurentius Kevin Hendinata - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -50,23 +50,32 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             border-left-color: #003366; /* Dark blue */
         }
-        .header-title {
+        .header {
+            background-color: #f8f9fa; /* Light gray */
+        }
+        .title-color {
             color: #003366; /* Dark blue */
+        }
+        .container {
+            max-width: 1200px; /* Centered layout */
+            margin: 0 auto;
+            padding: 0 1rem; /* Side padding */
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="py-6 border-b border-gray-200">
-        <div class="container mx-auto px-4">
-            <h1 class="text-3xl font-bold header-title text-center">Portfolio Onlineku</h1>
+    <header class="py-6 border-b border-gray-200 header">
+        <div class="container">
+            <h1 class="text-3xl font-bold title-color">Laurentius Kevin Hendinata</h1>
+            <p class="text-gray-600">Engineer | Acoustician | Researcher</p>
         </div>
     </header>
 
     <!-- About Me Section -->
     <section class="py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-4">ABOUT ME</h2>
+        <div class="container">
+            <h2 class="text-2xl font-bold mb-4 title-color">ABOUT ME</h2>
             <p class="mb-6">An engineer and acoustician with a focus on building physics and sustainable energy. Currently pursuing a master's degree in acoustic engineering with research interests in acoustics, building physics, and sustainable energy.</p>
             <button id="openProfileModal" class="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition">
                 View Full Profile
@@ -76,8 +85,8 @@
 
     <!-- Social Links -->
     <section class="py-6 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-4">CONTACT</h2>
+        <div class="container">
+            <h2 class="text-2xl font-bold mb-4 title-color">CONTACT</h2>
             <div class="flex flex-wrap gap-4">
                 <a href="https://www.instagram.com/kevinhendinata/" class="flex items-center gap-2 hover:text-gray-600 transition">
                     <i class="fab fa-instagram"></i> Instagram
@@ -94,9 +103,9 @@
 
     <!-- Research and Projects Section -->
     <section class="py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-6">RESEARCH & PROJECTS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="container">
+            <h2 class="text-2xl font-bold mb-6 title-color">RESEARCH & PROJECTS</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <!-- Project 1 -->
                 <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal1')">
                     <h3 class="text-xl font-bold mb-2">Acoustic Analysis for Green Mosque</h3>
@@ -172,7 +181,7 @@
 
     <!-- Quote Section -->
     <section class="py-12 bg-gray-50">
-        <div class="container mx-auto px-4 text-center">
+        <div class="container text-center">
             <blockquote class="text-xl italic max-w-2xl mx-auto">
                 "Our responsibility is to do what we can, learn what we can, improve the solutions, and pass them on."
                 <br><span class="text-gray-600">— Richard Feynman</span>
@@ -182,7 +191,7 @@
 
     <!-- Footer -->
     <footer class="py-6 border-t border-gray-200">
-        <div class="container mx-auto px-4 text-center">
+        <div class="container text-center">
             <p>&copy; 2025 Laurentius Kevin Hendinata, S.T., M.Sc. (Cand.)</p>
         </div>
     </footer>
@@ -251,11 +260,4 @@
             <p class="mb-4">This project involved comprehensive energy modeling and performance analysis to support green building certification for the UGM Innovation and Creativity Center. Both static calculations and dynamic thermal simulations were conducted to evaluate the building's energy consumption patterns and indoor environmental quality.</p>
             <p class="mb-4">The assessment covered multiple criteria including energy efficiency, water conservation, indoor air quality, and material sustainability. Innovative features such as hybrid ventilation strategies and responsive shading systems were analyzed through computational fluid dynamics and daylight modeling.</p>
             <p class="mb-4">Recommendations were developed to optimize the building's performance while maintaining its architectural vision. The implementation of these measures resulted in a 40% reduction in predicted energy use compared to conventional designs, qualifying the project for Gold-level certification under Indonesia's Green Building rating system.</p>
-            <p>The methodologies developed through this project have since been adopted as best practice guidelines for other institutional buildings pursuing green certification in tropical climates.</p>
-        </div>
-    </div>
-
-    <div id="modal6" class="modal">
-        <div class="modal-content relative">
-            <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
-            <h2 class="text-2xl font-bold mb-
+            <p>The methodologies developed through this project have since been adopted as best practice guidelines for other institutional buildings pursuing green certification
