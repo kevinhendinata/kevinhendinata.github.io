@@ -103,70 +103,70 @@
             <h2 class="text-2xl font-bold mb-6 title-color">RESEARCH & PROJECTS</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <!-- Project 1 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal1">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal1')">
                     <h3 class="text-xl font-bold mb-2">Acoustic Analysis for Green Mosque</h3>
                     <p class="text-gray-600 mb-4">Acoustic consultation for mosque renovation focusing on interior materials and sound systems.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal2">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal2')">
                     <h3 class="text-xl font-bold mb-2">Parametric Study on Plenum Windows</h3>
                     <p class="text-gray-600 mb-4">Evaluation of acoustic performance in window design.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal3">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal3')">
                     <h3 class="text-xl font-bold mb-2">Transparent Wood Research</h3>
                     <p class="text-gray-600 mb-4">Innovative material study for sustainable architecture.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal4">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal4')">
                     <h3 class="text-xl font-bold mb-2">Energy Efficiency Roadmap</h3>
                     <p class="text-gray-600 mb-4">National strategy for building energy optimization.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 5 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal5">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal5')">
                     <h3 class="text-xl font-bold mb-2">Green Building Certification</h3>
                     <p class="text-gray-600 mb-4">Energy modeling for UGM Innovation Center.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 6 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal6">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal6')">
                     <h3 class="text-xl font-bold mb-2">Smart Windows Technology</h3>
                     <p class="text-gray-600 mb-4">Review of dynamic glazing systems.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 7 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal7">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal7')">
                     <h3 class="text-xl font-bold mb-2">Coiled-Up Silencer Tubes</h3>
                     <p class="text-gray-600 mb-4">Urban noise insulation solutions.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 8 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal8">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal8')">
                     <h3 class="text-xl font-bold mb-2">Solar Street Lighting</h3>
                     <p class="text-gray-600 mb-4">Renewable energy implementation.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 9 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal9">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal9')">
                     <h3 class="text-xl font-bold mb-2">IoT Mushroom Cultivation</h3>
                     <p class="text-gray-600 mb-4">Environmental monitoring system.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
                 <!-- Project 10 -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-modal="modal10">
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100" onclick="openModal('modal10')">
                     <h3 class="text-xl font-bold mb-2">Environmental Literacy Study</h3>
                     <p class="text-gray-600 mb-4">Survey on energy awareness in Indonesia.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
@@ -213,7 +213,7 @@
     <!-- Profile Modal -->
     <div id="profileModal" class="modal">
         <div class="modal-content relative">
-            <span class="close-btn">&times;</span>
+            <span class="close-btn" onclick="closeModal('profileModal')">&times;</span>
             <h2 class="text-2xl font-bold mb-4">FULL PROFILE</h2>
             <p class="mb-4">Laurentius Kevin Hendinata is an engineer specializing in the intersection of building physics and sustainable energy, with particular expertise in acoustic performance of building openings. The research work encompasses both theoretical modeling and practical applications, supported by multiple academic awards and grants.</p>
             <p class="mb-4">A Bachelor of Engineering degree in Engineering Physics was completed at Universitas Gadjah Mada, where recognition as the Faculty of Engineering's Most Outstanding Student was received. Currently, a joint master's degree in acoustic engineering is being pursued through the prestigious Erasmus Mundus WAVES program, spanning three European universities.</p>
@@ -224,7 +224,7 @@
     <!-- Project Modals -->
     <div id="modal1" class="modal">
         <div class="modal-content relative">
-            <span class="close-btn">&times;</span>
+            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
             <h2 class="text-2xl font-bold mb-4">Acoustic Analysis for Green Mosque Dzarratul Muthmainnah</h2>
             <p class="mb-4">This project provided comprehensive acoustic consultation for the renovation of the Dzarratul Muthmainnah Green Mosque in South Tangerang. The primary focus was optimizing interior acoustics through material selection and sound system design.</p>
             <p class="mb-4">Key recommendations included:</p>
@@ -238,55 +238,123 @@
         </div>
     </div>
 
-    <!-- Remaining project modals would follow same structure -->
-    
+    <div id="modal2" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Parametric Study on Plenum Windows</h2>
+            <p class="mb-4">This investigation systematically evaluated the acoustic performance of plenum window designs through advanced numerical modeling techniques. Finite-Difference Time-Domain (FDTD) and Finite-Element Method analyses were employed to assess sound transmission characteristics under various geometric configurations.</p>
+            <p class="mb-4">Key parameters including glass separation distance, pane overlap dimensions, angular orientations, and the integration of sonic crystal arrays were examined. The study revealed non-linear relationships between geometric modifications and acoustic performance, with particular sensitivity observed in the mid-frequency range.</p>
+            <p>Practical design guidelines were developed from the findings, enabling architects to optimize window configurations for both noise reduction and natural ventilation requirements.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Transparent Wood Research</h2>
+            <p class="mb-4">This materials research initiative explored the potential of transparent wood composites as multifunctional building elements. Optical, thermal, and mechanical properties were characterized through laboratory testing and computational modeling, with particular attention to their performance in tropical climates.</p>
+            <p class="mb-4">The investigation demonstrated how lignin-modified wood substrates could simultaneously provide daylight transmission, thermal insulation, and structural capacity. Comparative analyses with conventional glazing systems revealed significant advantages in terms of embodied energy and passive cooling potential.</p>
+            <p>Prototype facade elements were developed and monitored under real-world conditions, validating simulation predictions about their ability to reduce cooling loads while maintaining visual connectivity with the exterior environment.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Energy Efficiency Roadmap</h2>
+            <p class="mb-4">This nationwide study established comprehensive energy consumption benchmarks for diverse building typologies across Indonesia's major urban centers. Data was collected through systematic audits of hundreds of buildings, complemented by utility record analysis and occupant surveys.</p>
+            <p class="mb-4">Statistical models were developed to identify key drivers of energy use intensity, accounting for climatic variations, operational patterns, and building characteristics. The analysis revealed significant opportunities for improvement, particularly in cooling systems and lighting efficiency.</p>
+            <p>A tiered implementation roadmap was formulated, prioritizing cost-effective measures with rapid payback periods alongside more comprehensive retrofitting strategies.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Green Building Certification</h2>
+            <p class="mb-4">This project involved comprehensive energy modeling and performance analysis to support green building certification for the UGM Innovation and Creativity Center. Both static calculations and dynamic thermal simulations were conducted to evaluate the building's energy consumption patterns and indoor environmental quality.</p>
+            <p class="mb-4">The assessment covered multiple criteria including energy efficiency, water conservation, indoor air quality, and material sustainability. Innovative features such as hybrid ventilation strategies and responsive shading systems were analyzed through computational fluid dynamics and daylight modeling.</p>
+            <p>The implementation of these measures resulted in a 40% reduction in predicted energy use compared to conventional designs, qualifying the project for Gold-level certification under Indonesia's Green Building rating system.</p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Smart Windows Technology</h2>
+            <p class="mb-4">This comprehensive review analyzed active and passive smart window technologies with potential applications in tropical climates. Various technologies were evaluated including electrochromic, thermochromic, photochromic, and suspended particle device systems.</p>
+            <p class="mb-4">Performance characteristics such as optical modulation range, switching speed, durability, and energy efficiency were compared across different technologies. Special attention was given to their suitability for Indonesian building conditions, considering factors like high humidity, intense solar radiation, and typical usage patterns.</p>
+            <p>The findings provide architects and building designers with practical guidance for selecting appropriate smart window technologies based on specific project requirements and environmental conditions.</p>
+        </div>
+    </div>
+
+    <div id ="modal7" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal7')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Coiled-Up Silencer Tubes</h2>
+            <p class="mb-4">This project focused on developing innovative noise insulation solutions for urban environments. The design of coiled-up silencer tubes was explored to effectively reduce sound transmission in high-density areas.</p>
+            <p class="mb-4">Through computational modeling and experimental validation, the acoustic performance of these tubes was assessed under various conditions. The results indicated significant reductions in noise levels, making them suitable for applications in residential and commercial buildings.</p>
+            <p>Field tests demonstrated their effectiveness in mitigating noise pollution, contributing to improved urban living conditions.</p>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal8')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Solar Street Lighting</h2>
+            <p class="mb-4">This project aimed to implement renewable energy solutions through solar street lighting systems in urban areas. The design focused on maximizing energy efficiency and minimizing environmental impact.</p>
+            <p class="mb-4">A comprehensive analysis of solar panel efficiency, battery storage, and LED technology was conducted to ensure optimal performance. The project included pilot installations that demonstrated significant energy savings and enhanced public safety.</p>
+            <p>Feedback from community stakeholders highlighted the positive impact on nighttime visibility and overall urban aesthetics.</p>
+        </div>
+    </div>
+
+    <div id="modal9" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal9')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">IoT Mushroom Cultivation</h2>
+            <p class="mb-4">This project explored the integration of Internet of Things (IoT) technology in mushroom cultivation to enhance environmental monitoring and optimize growth conditions.</p>
+            <p class="mb-4">Sensors were deployed to track temperature, humidity, and CO2 levels, providing real-time data to farmers. The system enabled automated adjustments to the growing environment, resulting in increased yield and reduced resource consumption.</p>
+            <p>Data analytics were utilized to refine cultivation practices, leading to improved sustainability in agricultural operations.</p>
+        </div>
+    </div>
+
+    <div id="modal10" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal10')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Environmental Literacy Study</h2>
+            <p class="mb-4">This study assessed the level of environmental awareness among various demographics in Indonesia, focusing on energy conservation practices and sustainability education.</p>
+            <p class="mb-4">Surveys and interviews were conducted to gather data on knowledge, attitudes, and behaviors related to energy use. The findings revealed significant gaps in understanding and highlighted the need for targeted educational initiatives.</p>
+            <p>Recommendations were made to enhance environmental literacy through community programs and school curricula, aiming to foster a culture of sustainability.</p>
+        </div>
+    </div>
+
     <script>
-        // Improved modal handling
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add click handlers to all project cards
-            document.querySelectorAll('.project-card').forEach(card => {
-                card.addEventListener('click', function() {
-                    const modalId = this.getAttribute('data-modal');
-                    if (modalId) {
-                        document.getElementById(modalId).style.display = 'flex';
-                        document.body.style.overflow = 'hidden';
-                    }
-                });
-            });
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
 
-            // Add click handlers to close buttons
-            document.querySelectorAll('.close-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    this.closest('.modal').style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                });
-            });
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
 
-            // Close modals when clicking outside content
-            document.querySelectorAll('.modal').forEach(modal => {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        this.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            });
-
-            // Profile modal button
-            document.getElementById('openProfileModal').addEventListener('click', function() {
-                document.getElementById('profileModal').style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
-
-            // Close with Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    document.querySelectorAll('.modal').forEach(modal => {
-                        modal.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    });
+        // Close modals when clicking outside content
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal(modal.id);
                 }
             });
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    closeModal(modal.id);
+                });
+            }
         });
     </script>
 </body>
