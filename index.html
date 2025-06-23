@@ -1,105 +1,217 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import React from "react";
-
-
-import { AboutMeSection } from "./AboutMeSection";
-import { BlogSection } from "./BlogSection";
-import { CallToActionSection } from "./CallToActionSection";
-import { HapyyClientsByAnima } from "./HapyyClientsByAnima";
-// Import all sections
-import { HeroSection } from "./HeroSection";
-import { PortfolioSection } from "./PortfolioSection";
-import { ServicesSection } from "./ServicesSection";
-import { TestimonialSection } from "./TestimonialSection";
-import { WorkProcessSection } from "./WorkProcessSection";
-
-// Stats data for the stats card
-const statsData = [
-  { value: "2 Y.", label: "Experience" },
-  { value: "250+", label: "Project Completed" },
-  { value: "58", label: "Happy Client" },
-];
-
-export default function Homepage(): JSX.Element {
-  return (
-    <div className="bg-white flex flex-row justify-center w-full">
-      <div className="bg-white overflow-hidden w-full relative">
-        {/* Background elements */}
-        <div className="relative w-full">
-          <div className="w-[871px] h-[871px] absolute top-[4093px] left-[178px] bg-[#da4df166] rounded-[435.61px] rotate-[-130.44deg] blur-[500px]" />
-          <div className="w-[1044px] h-[1044px] absolute top-[4207px] left-[2616px] bg-[#c4f5e9b2] rounded-[522.16px] rotate-[-130.44deg] blur-[600px]" />
-
-          {/* Background image */}
-          <img
-            className="w-full h-auto object-cover absolute top-0 left-0 z-0"
-            alt="Background"
-            src=""
-          />
-
-          {/* Header image */}
-          <img
-            className="w-full h-24 absolute top-0 left-0 z-10"
-            alt="Header frame"
-            src=""
-          />
-
-          {/* Main content container */}
-          <div className="relative z-10">
-            {/* Hero section with decorative elements */}
-            <section className="relative">
-              <HeroSection />
-
-              {/* Decorative elements */}
-              <div className="absolute w-[133px] h-1.5 top-[479px] right-[434px] bg-[#ffc7c7]" />
-              <div className="absolute w-[92px] h-1.5 top-[479px] right-[298px] bg-[#ffc7c7]" />
-
-              {/* Hero image */}
-              <img
-                className="absolute w-[768px] h-[868px] top-[113px] right-0"
-                alt="Profile"
-                src=""
-              />
-
-              {/* Stats card */}
-              <Card className="inline-flex items-center justify-center gap-3 absolute top-[752px] left-[calc(50%-300px)] bg-[#edd8ff80] rounded-md border border-solid border-graywhite">
-                <CardContent className="flex items-center p-0">
-                  {statsData.map((stat, index) => (
-                    <React.Fragment key={index}>
-                      {index > 0 && (
-                        <Separator
-                          orientation="vertical"
-                          className="h-[106px] w-[3px] mx-3"
-                        />
-                      )}
-                      <div className="flex flex-col items-center gap-2">
-                        <div className="w-[200px] font-heading-03 font-[number:var(--heading-03-font-weight)] text-gray-700 text-[length:var(--heading-03-font-size)] text-center tracking-[var(--heading-03-letter-spacing)] leading-[var(--heading-03-line-height)] [font-style:var(--heading-03-font-style)]">
-                          {stat.value}
-                        </div>
-                        <div className="w-[200px] font-body-regular-400 font-[number:var(--body-regular-400-font-weight)] text-gray-500 text-[length:var(--body-regular-400-font-size)] text-center tracking-[var(--body-regular-400-letter-spacing)] leading-[var(--body-regular-400-line-height)] [font-style:var(--body-regular-400-font-style)]">
-                          {stat.label}
-                        </div>
-                      </div>
-                    </React.Fragment>
-                  ))}
-                </CardContent>
-              </Card>
-            </section>
-
-            {/* Main content sections */}
-            <div className="flex flex-col w-full">
-              <AboutMeSection />
-              <PortfolioSection />
-              <CallToActionSection />
-              <BlogSection />
-              <ServicesSection />
-              <HapyyClientsByAnima />
-              <TestimonialSection />
-              <WorkProcessSection />
-            </div>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurentius Kevin Hendinata - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333333;
+        }
+        .header {
+            background-color: #000000;
+            color: white;
+        }
+        a {
+            color: #000000;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header py-6">
+        <div class="container mx-auto text-left">
+            <h1 class="text-4xl font-bold">An Online Portfolio of My Work</h1>
         </div>
-      </div>
-    </div>
-  );
-}
+    </header>
+
+    <!-- About Me Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">ABOUT ME</h2>
+            <p>An engineer and acoustician with a focus on building physics and sustainable energy, I am currently pursuing a master's degree in acoustic engineering. I have a strong background in research and am passionate about opportunities in acoustics engineering and building physics. For more details, visit my <a href="#about-me-full" class="text-blue-600">full profile</a>.</p>
+        </div>
+    </section>
+
+    <!-- Full About Me Section (Hidden) -->
+    <section id="about-me-full" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">ABOUT ME</h2>
+            <p>An engineer who is interested in the topics of intersection between building physics and sustainable energy, with a research focus on windows and openings in buildings. Has various awards and grants, and experienced in research projects, lab works, and writing professionally.</p>
+            <p><strong>Laurentius Kevin Hendinata, S.T., M.Sc. (Cand.)</strong>, commonly known as Kevin, holds a Bachelor of Engineering degree in Engineering Physics from the Universitas Gadjah Mada. He was awarded as the Most Outstanding Student of the Faculty of Engineering during his bachelor’s degree.</p>
+            <p>Currently, Kevin is pursuing a joint master’s degree in acoustic engineering through the Erasmus Mundus Joint Master Degree – WAVES (Waves, Acoustics, Vibrations, Engineering and Sound) program, which is an international master with multiple degrees from University of Coimbra Portugal, Polytechnic University of Valencia Spain, and Aix-Marseille University.</p>
+            <p>He is a member of the Society of Façade Engineering, American Physical Society, National Society of Professional Engineers.</p>
+            <p>Kevin’s research interests are focused on Acoustics, Building Physics, and Sustainable Energy. He is open to any opportunities and collaboration within the scope of acoustics engineering and building physics, and can be contacted through: <a href="mailto:kevinhendinata@outlook.com">kevinhendinata@outlook.com</a></p>
+        </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="py-6">
+        <div class="container mx-auto text-left">
+            <h2 class="text-2xl font-bold mb-4">Connect with Me</h2>
+            <a href="https://www.instagram.com/kevinhendinata/" class="mx-2">Instagram</a>
+            <a href="https://www.linkedin.com/in/kevinhendinata/" class="mx-2">LinkedIn</a>
+            <a href="mailto:kevinhendinata@outlook.com" class="mx-2">Mail</a>
+        </div>
+    </section>
+
+    <!-- Research and Projects Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Research and Projects</h2>
+            <ul class="list-disc pl-5">
+                <li><a href="#project1" class="font-bold">Acoustic Analysis and Recommendation for Green Mosque Dzarratul Muthmainnah in South Tangerang</a>: Acoustic consultation for the renovation of the mosque.</li>
+                <li><a href="#project2" class="font-bold">Parametric Study on Transmission Loss of A Plenum Windows: A Geometrical Analysis</a>: Evaluating transmission and insertion loss of plenum windows.</li>
+                <li><a href="#project3" class="font-bold">Transparent Wood as Building Material and Passive Cooling Component</a>: Exploring the potential of transparent wood in construction.</li>
+                <li><a href="#project4" class="font-bold">Development of Baseline and Roadmap for Energy Efficiency in Buildings Across Indonesia</a>: Survey and modeling of energy efficiency measures.</li>
+                <li><a href="#project5" class="font-bold">Green Building Certification (BGH PUPR) of the UGM Innovation and Creativity Center</a>: Analysis for green building certification.</li>
+                <li><a href="#project6" class="font-bold">Smart Windows: An Overview of Active and Passive Technologies for Energy-Efficient Buildings</a>: Overview of smart window technologies.</li>
+                <li><a href="#project7" class="font-bold">Coiled-Up Silencer Tubes for Outdoor Noise Insulation Applications in Urban Buildings</a>: Addressing noise pollution in urban areas.</li>
+                <li><a href="#project8" class="font-bold">Implementation of Solar Street Lighting in an Indonesian Community</a>: Utilizing renewable energy sources.</li>
+                <li><a href="#project9" class="font-bold">IoT-Based Relative Humidity and Room Temperature Monitoring Tool for Mushroom Cultivation House</a>: Monitoring tool for mushroom cultivation.</li>
+                <li><a href="#project10" class="font-bold">Exploring Environmental Literacy in Indonesia: Focusing on Energy and Green Building</a>: Importance of environmental literacy.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Project Descriptions -->
+    <section id="project1" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Acoustic Analysis and Recommendation for Green Mosque Dzarratul Muthmainnah in South Tangerang</h2>
+            <p>This project involved conducting an acoustic analysis for the renovation of the Dzarratul Muthmainnah Green Mosque. The focus was on optimizing the sound system and improving room acoustics to enhance the worship experience.</p>
+            <p>We assessed the existing conditions and provided recommendations for sound system upgrades, including speaker placement and acoustic treatment options.</p>
+            <p>The project aimed to create a serene and acoustically pleasant environment for the congregation, ensuring that sound quality is maintained during prayers and events.</p>
+            <p>Through this project, we demonstrated the importance of acoustics in religious spaces and how it can significantly impact the overall experience of worshippers.</p>
+        </div>
+    </section>
+
+    <section id="project2" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Parametric Study on Transmission Loss of A Plenum Windows: A Geometrical Analysis</h2>
+            <p>This research focused on evaluating the transmission and insertion loss of plenum windows using advanced simulation techniques.</p>
+            <p>We conducted a parametric study with variations in glass separation, overlapping, pane angle, and the addition of sonic crystals to optimize performance.</p>
+            <p>The findings provide valuable insights into the design of energy-efficient windows that can significantly reduce noise pollution while maintaining aesthetic appeal.</p>
+            <p>This project contributes to the development of innovative building materials that enhance both comfort and sustainability in urban environments.</p>
+        </div>
+    </section>
+
+    <section id="project3" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Transparent Wood as Building Material and Passive Cooling Component</h2>
+            <p>This project explores the potential of transparent wood as a revolutionary building material that combines aesthetics with functionality.</p>
+            <p>We investigated its properties and applications in passive cooling systems, aiming to reduce energy consumption in buildings.</p>
+            <p>The research highlights the benefits of using transparent wood in architecture, including its ability to provide natural light while maintaining thermal comfort.</p>
+            <p>Our findings suggest that transparent wood could play a significant role in the future of sustainable building practices.</p>
+        </div>
+    </section>
+
+    <section id="project4" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Development of Baseline and Roadmap for Energy Efficiency in Buildings Across Indonesia</h2>
+            <p>This project involved surveying and modeling baseline energy consumption in various cities across Indonesia.</p>
+            <p>We formulated energy efficiency measures aimed at achieving significant energy savings and reducing carbon footprints.</p>
+            <p>The roadmap developed serves as a guideline for policymakers and stakeholders to implement effective energy-saving strategies in the building sector.</p>
+            <p>This initiative is crucial for promoting sustainable development and addressing climate change challenges in Indonesia.</p>
+        </div>
+    </section>
+
+    <section id="project5" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Green Building Certification (BGH PUPR) of the UGM Innovation and Creativity Center</h2>
+            <p>This project focused on analyzing and modeling energy consumption for the UGM Innovation and Creativity Center to achieve green building certification.</p>
+            <p>We assessed static and dynamic thermal values to ensure compliance with green building standards.</p>
+            <p>The certification process involved rigorous evaluations of energy efficiency measures and sustainable practices implemented in the building.</p>
+            <p>This project highlights the importance of green building certifications in promoting sustainable architecture and construction practices.</p>
+        </div>
+    </section>
+
+    <section id="project6" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Smart Windows: An Overview of Active and Passive Technologies for Energy-Efficient Buildings</h2>
+            <p>This research provides an overview of smart window technologies, including active and passive systems designed for energy-efficient buildings.</p>
+            <p>We explored various technologies that allow windows to adapt to environmental conditions, enhancing energy performance and occupant comfort.</p>
+            <p>The findings emphasize the potential of smart windows to contribute to sustainable building designs and reduce energy consumption.</p>
+            <p>This project aims to inform architects and engineers about the latest advancements in window technologies for energy-efficient buildings.</p>
+        </div>
+    </section>
+
+    <section id="project7" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Coiled-Up Silencer Tubes for Outdoor Noise Insulation Applications in Urban Buildings</h2>
+            <p>This project addresses the growing concern of noise pollution in urban areas and its impact on health and well-being.</p>
+            <p>We developed coiled-up silencer tubes designed to effectively reduce outdoor noise levels in residential and commercial buildings.</p>
+            <p>The research involved testing various designs and materials to optimize sound insulation performance.</p>
+            <p>This project contributes to the development of innovative solutions for improving urban living conditions through effective noise control measures.</p>
+        </div>
+    </section>
+
+    <section id="project8" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Implementation of Solar Street Lighting in an Indonesian Community</h2>
+            <p>This project focused on the implementation of solar street lighting systems in a community in Indonesia.</p>
+            <p>We assessed the feasibility and benefits of using renewable energy sources to enhance public safety and reduce energy costs.</p>
+            <p>The project involved community engagement and education on the importance of renewable energy for sustainable development.</p>
+            <p>This initiative aims to promote the use of solar energy in urban planning and infrastructure development.</p>
+        </div>
+    </section>
+
+    <section id="project9" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">IoT-Based Relative Humidity and Room Temperature Monitoring Tool for Mushroom Cultivation House</h2>
+            <p>This project developed an IoT-based monitoring tool for controlling relative humidity and room temperature in mushroom cultivation houses.</p>
+            <p>We aimed to optimize growing conditions to enhance yield and quality of mushrooms while minimizing resource consumption.</p>
+            <p>The tool provides real-time data and alerts, allowing farmers to make informed decisions for better crop management.</p>
+            <p>This project highlights the role of technology in modern agriculture and its potential to improve productivity and sustainability.</p>
+        </div>
+    </section>
+
+    <section id="project10" class="hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Exploring Environmental Literacy in Indonesia: Focusing on Energy and Green Building</h2>
+            <p>This research explores the concept of environmental literacy in Indonesia, particularly in relation to energy and green building practices.</p>
+            <p>We assessed the current state of environmental education and its impact on sustainable development in the country.</p>
+            <p>The findings emphasize the need for increased awareness and education on environmental issues to foster a culture of sustainability.</p>
+            <p>This project aims to inform policymakers and educators about the importance of integrating environmental literacy into curricula and community programs.</p>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-6 text-center">
+        <blockquote class="italic text-lg">
+            “Our responsibility is to do what we can, learn what we can, improve the solutions, and pass them on.” 
+            <br>— Richard Feynman
+        </blockquote>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center">
+        <p>&copy; 2023 Laurentius Kevin Hendinata, S.T., M.Sc. (Cand.)</p>
+    </footer>
+
+    <script>
+        // Show full about me section when clicked
+        document.querySelector('a[href="#about-me-full"]').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('about-me-full').classList.toggle('hidden');
+        });
+
+        // Show project descriptions when clicked
+        document.querySelectorAll('a[href^="#project"]').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const projectId = this.getAttribute('href');
+                document.querySelectorAll('section[id^="project"]').forEach(section => {
+                    section.classList.add('hidden');
+                });
+                document.querySelector(projectId).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
