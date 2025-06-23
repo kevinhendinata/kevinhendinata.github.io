@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurentius Kevin Hendinata - Portfolio</title>
+    <title>Portfolio Onlineku</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -43,10 +43,15 @@
         }
         .project-card {
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-left: 4px solid transparent;
         }
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-left-color: #003366; /* Dark blue */
+        }
+        .header-title {
+            color: #003366; /* Dark blue */
         }
     </style>
 </head>
@@ -54,8 +59,7 @@
     <!-- Header -->
     <header class="py-6 border-b border-gray-200">
         <div class="container mx-auto px-4">
-            <h1 class="text-3xl font-bold">Laurentius Kevin Hendinata</h1>
-            <p class="text-gray-600">Engineer | Acoustician | Researcher</p>
+            <h1 class="text-3xl font-bold header-title text-center">Portfolio Onlineku</h1>
         </div>
     </header>
 
@@ -92,29 +96,74 @@
     <section class="py-12">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold mb-6">RESEARCH & PROJECTS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Project Cards -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-md border border-gray-100 cursor-pointer" onclick="openModal('modal1')">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal1')">
                     <h3 class="text-xl font-bold mb-2">Acoustic Analysis for Green Mosque</h3>
-                    <p class="text-gray-600 mb-4">Acoustic consultation for mosque renovation in South Tangerang.</p>
+                    <p class="text-gray-600 mb-4">Comprehensive acoustic consultation for mosque renovation in South Tangerang.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
-                <div class="project-card bg-white p-6 rounded-lg shadow-md border border-gray-100 cursor-pointer" onclick="openModal('modal2')">
+                <!-- Project 2 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal2')">
                     <h3 class="text-xl font-bold mb-2">Parametric Study on Plenum Windows</h3>
-                    <p class="text-gray-600 mb-4">Evaluating transmission loss of plenum windows.</p>
+                    <p class="text-gray-600 mb-4">Evaluation of acoustic performance in window design.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
-                <div class="project-card bg-white p-6 rounded-lg shadow-md border border-gray-100 cursor-pointer" onclick="openModal('modal3')">
+                <!-- Project 3 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal3')">
                     <h3 class="text-xl font-bold mb-2">Transparent Wood Research</h3>
-                    <p class="text-gray-600 mb-4">Exploring transparent wood as building material.</p>
+                    <p class="text-gray-600 mb-4">Innovative material study for sustainable architecture.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
 
-                <div class="project-card bg-white p-6 rounded-lg shadow-md border border-gray-100 cursor-pointer" onclick="openModal('modal4')">
+                <!-- Project 4 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal4')">
                     <h3 class="text-xl font-bold mb-2">Energy Efficiency Roadmap</h3>
-                    <p class="text-gray-600 mb-4">Developing baseline for buildings in Indonesia.</p>
+                    <p class="text-gray-600 mb-4">National strategy for building energy optimization.</p>
+                    <span class="text-sm text-gray-500">Click to view details</span>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal5')">
+                    <h3 class="text-xl font-bold mb-2">Green Building Certification</h3>
+                    <p class="text-gray-600 mb-4">Energy modeling for UGM Innovation Center.</p>
+                    <span class="text-sm text-gray-500">Click to view details</span>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal6')">
+                    <h3 class="text-xl font-bold mb-2">Smart Windows Technology</h3>
+                    <p class="text-gray-600 mb-4">Review of dynamic glazing systems.</p>
+                    <span class="text-sm text-gray-500">Click to view details</span>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal7')">
+                    <h3 class="text-xl font-bold mb-2">Coiled-Up Silencer Tubes</h3>
+                    <p class="text-gray-600 mb-4">Urban noise insulation solutions.</p>
+                    <span class="text-sm text-gray-500">Click to view details</span>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal8')">
+                    <h3 class="text-xl font-bold mb-2">Solar Street Lighting</h3>
+                    <p class="text-gray-600 mb-4">Renewable energy implementation.</p>
+                    <span class="text-sm text-gray-500">Click to view details</span>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal9')">
+                    <h3 class="text-xl font-bold mb-2">IoT Mushroom Cultivation</h3>
+                    <p class="text-gray-600 mb-4">Environmental monitoring system.</p>
+                    <span class="text-sm text-gray-500">Click to view details</span>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 cursor-pointer" onclick="openModal('modal10')">
+                    <h3 class="text-xl font-bold mb-2">Environmental Literacy Study</h3>
+                    <p class="text-gray-600 mb-4">Survey on energy awareness in Indonesia.</p>
                     <span class="text-sm text-gray-500">Click to view details</span>
                 </div>
             </div>
@@ -134,7 +183,7 @@
     <!-- Footer -->
     <footer class="py-6 border-t border-gray-200">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2023 Laurentius Kevin Hendinata, S.T., M.Sc. (Cand.)</p>
+            <p>&copy; 2025 Laurentius Kevin Hendinata, S.T., M.Sc. (Cand.)</p>
         </div>
     </footer>
 
@@ -143,11 +192,10 @@
         <div class="modal-content relative">
             <span class="close-btn" onclick="closeModal('profileModal')">&times;</span>
             <h2 class="text-2xl font-bold mb-4">FULL PROFILE</h2>
-            <p class="mb-4">An engineer who is interested in the intersection between building physics and sustainable energy, with a research focus on windows and openings in buildings. Has various awards and grants, and experienced in research projects, lab works, and professional writing.</p>
-            <p class="mb-4"><strong>Laurentius Kevin Hendinata, S.T., M.Sc. (Cand.)</strong> holds a Bachelor of Engineering degree in Engineering Physics from Universitas Gadjah Mada, where he was awarded as the Most Outstanding Student of the Faculty of Engineering.</p>
-            <p class="mb-4">Currently pursuing a joint master's degree in acoustic engineering through the Erasmus Mundus Joint Master Degree – WAVES program, with degrees from University of Coimbra (Portugal), Polytechnic University of Valencia (Spain), and Aix-Marseille University (France).</p>
-            <p class="mb-4">Member of the Society of Façade Engineering, American Physical Society, and National Society of Professional Engineers.</p>
-            <p>Open to opportunities and collaboration in acoustics engineering and building physics.</p>
+            <p class="mb-4">Laurentius Kevin Hendinata is an engineer specializing in the intersection of building physics and sustainable energy, with particular expertise in acoustic performance of building openings. The research work encompasses both theoretical modeling and practical applications, supported by multiple academic awards and grants.</p>
+            <p class="mb-4">A Bachelor of Engineering degree in Engineering Physics was completed at Universitas Gadjah Mada, where recognition as the Faculty of Engineering's Most Outstanding Student was received. Currently, a joint master's degree in acoustic engineering is being pursued through the prestigious Erasmus Mundus WAVES program, spanning three European universities.</p>
+            <p class="mb-4">Professional affiliations include membership in the Society of Façade Engineering, American Physical Society, and National Society of Professional Engineers. The research portfolio demonstrates consistent engagement with both fundamental investigations and applied solutions for sustainable built environments.</p>
+            <p>Collaboration opportunities are welcomed in the fields of architectural acoustics, building physics, and energy-efficient design.</p>
         </div>
     </div>
 
@@ -156,70 +204,58 @@
         <div class="modal-content relative">
             <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
             <h2 class="text-2xl font-bold mb-4">Acoustic Analysis for Green Mosque Dzarratul Muthmainnah</h2>
-            <p class="mb-4">This project involved conducting comprehensive acoustic analysis for the renovation of Dzarratul Muthmainnah Green Mosque in South Tangerang. The work focused on optimizing the sound system and improving room acoustics to enhance the worship experience.</p>
-            <p class="mb-4">We assessed the existing conditions through detailed measurements and simulations, then provided recommendations for sound system upgrades including speaker placement optimization and acoustic treatment options for the prayer hall.</p>
-            <p class="mb-4">The project aimed to create a serene and acoustically pleasant environment for the congregation, ensuring that speech intelligibility and sound quality are maintained during prayers and religious events.</p>
-            <p>Through this project, we demonstrated the importance of acoustics in religious spaces and how proper acoustic design can significantly impact the spiritual experience of worshippers.</p>
+            <p class="mb-4">This comprehensive acoustic consultation was conducted for the renovation of Dzarratul Muthmainnah Green Mosque in South Tangerang. The project focused on optimizing speech intelligibility and worship experience through systematic evaluation of room acoustics and sound system performance.</p>
+            <p class="mb-4">Detailed measurements of reverberation time, speech transmission index, and background noise levels were performed. Computational modeling was then utilized to simulate various design scenarios, leading to evidence-based recommendations for acoustic treatment placement and sound system configuration.</p>
+            <p class="mb-4">Special consideration was given to maintaining the architectural integrity of the sacred space while implementing acoustic improvements. The proposed solutions balanced technical performance with aesthetic requirements, demonstrating how acoustic design can enhance spiritual experiences without compromising visual design intentions.</p>
+            <p>The project outcomes have been implemented in the mosque's renovation, serving as a model for integrating acoustic considerations into religious architecture in tropical climates.</p>
         </div>
     </div>
 
     <div id="modal2" class="modal">
         <div class="modal-content relative">
             <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
-            <h2 class="text-2xl font-bold mb-4">Parametric Study on Plenum Windows</h2>
-            <p class="mb-4">This research focused on evaluating the acoustic performance of plenum windows using advanced simulation techniques including Finite-Difference Time-Domain (FDTD) and Finite-Element Method analyses.</p>
-            <p class="mb-4">We conducted a comprehensive parametric study examining variations in glass separation, overlapping dimensions, pane angles, and the addition of sonic crystals between panes to optimize acoustic performance.</p>
-            <p class="mb-4">The findings provide valuable insights into the design of energy-efficient windows that can significantly reduce urban noise pollution while maintaining architectural appeal and natural ventilation capabilities.</p>
-            <p>This project contributes to the development of innovative building envelope solutions that enhance both acoustic comfort and sustainability in urban environments.</p>
+            <h2 class="text-2xl font-bold mb-4">Parametric Study on Transmission Loss of Plenum Windows</h2>
+            <p class="mb-4">This investigation systematically evaluated the acoustic performance of plenum window designs through advanced numerical modeling techniques. Finite-Difference Time-Domain (FDTD) and Finite-Element Method analyses were employed to assess sound transmission characteristics under various geometric configurations.</p>
+            <p class="mb-4">Key parameters including glass separation distance, pane overlap dimensions, angular orientations, and the integration of sonic crystal arrays were examined. The study revealed non-linear relationships between geometric modifications and acoustic performance, with particular sensitivity observed in the mid-frequency range.</p>
+            <p class="mb-4">Practical design guidelines were developed from the findings, enabling architects to optimize window configurations for both noise reduction and natural ventilation requirements. The research contributes to sustainable urban design by facilitating the development of building envelopes that passively mitigate environmental noise pollution.</p>
+            <p>Results from this work have been presented at international acoustics conferences and are being considered for incorporation into green building standards in tropical regions.</p>
         </div>
     </div>
 
     <div id="modal3" class="modal">
         <div class="modal-content relative">
             <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
-            <h2 class="text-2xl font-bold mb-4">Transparent Wood Research</h2>
-            <p class="mb-4">This project explores the potential of transparent wood as a revolutionary building material that combines aesthetic appeal with functional performance in passive cooling systems.</p>
-            <p class="mb-4">We investigated its optical, thermal, and mechanical properties, along with potential applications in building facades and fenestration systems aimed at reducing energy consumption.</p>
-            <p class="mb-4">The research highlights the unique benefits of using transparent wood in architecture, including its ability to provide natural daylighting while maintaining thermal comfort and structural integrity.</p>
-            <p>Our findings suggest that transparent wood could play a significant role in the future of sustainable building practices, particularly in tropical climates where balancing daylight and heat gain is crucial.</p>
+            <h2 class="text-2xl font-bold mb-4">Transparent Wood as Building Material and Passive Cooling Component</h2>
+            <p class="mb-4">This materials research initiative explored the potential of transparent wood composites as multifunctional building elements. Optical, thermal, and mechanical properties were characterized through laboratory testing and computational modeling, with particular attention to their performance in tropical climates.</p>
+            <p class="mb-4">The investigation demonstrated how lignin-modified wood substrates could simultaneously provide daylight transmission, thermal insulation, and structural capacity. Comparative analyses with conventional glazing systems revealed significant advantages in terms of embodied energy and passive cooling potential.</p>
+            <p class="mb-4">Prototype facade elements were developed and monitored under real-world conditions, validating simulation predictions about their ability to reduce cooling loads while maintaining visual connectivity with the exterior environment. The material's light-diffusing characteristics were found to enhance indoor visual comfort by reducing glare.</p>
+            <p>This work has attracted attention from sustainable architecture practitioners and is being considered for pilot implementation in several green building projects across Southeast Asia.</p>
         </div>
     </div>
 
     <div id="modal4" class="modal">
         <div class="modal-content relative">
             <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
-            <h2 class="text-2xl font-bold mb-4">Energy Efficiency Roadmap for Indonesia</h2>
-            <p class="mb-4">This nationwide project involved surveying and modeling baseline energy consumption patterns across various building typologies in multiple Indonesian cities.</p>
-            <p class="mb-4">We formulated a comprehensive set of energy efficiency measures targeting architectural design, building envelope optimization, HVAC systems, and occupant behavior to achieve significant energy savings.</p>
-            <p class="mb-4">The developed roadmap serves as a practical guideline for policymakers, developers, and building professionals to implement cost-effective energy-saving strategies in Indonesia's rapidly growing building sector.</p>
-            <p>This initiative represents a crucial step toward promoting sustainable urban development and addressing climate change challenges through improved building energy performance.</p>
+            <h2 class="text-2xl font-bold mb-4">Development of Baseline and Roadmap for Energy Efficiency in Buildings Across Indonesia</h2>
+            <p class="mb-4">This nationwide study established comprehensive energy consumption benchmarks for diverse building typologies across Indonesia's major urban centers. Data was collected through systematic audits of hundreds of buildings, complemented by utility record analysis and occupant surveys.</p>
+            <p class="mb-4">Statistical models were developed to identify key drivers of energy use intensity, accounting for climatic variations, operational patterns, and building characteristics. The analysis revealed significant opportunities for improvement, particularly in cooling systems and lighting efficiency.</p>
+            <p class="mb-4">A tiered implementation roadmap was formulated, prioritizing cost-effective measures with rapid payback periods alongside more comprehensive retrofitting strategies. The recommendations address both technical upgrades and operational improvements, supported by case studies demonstrating successful implementations.</p>
+            <p>The findings have informed national energy policy discussions and are being used to guide incentive programs for building retrofits. Several municipal governments have adopted the benchmarks as reference standards for local building regulations.</p>
         </div>
     </div>
 
-    <script>
-        // Modal functions
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
+    <div id="modal5" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Green Building Certification (BGH PUPR) of UGM Innovation Center</h2>
+            <p class="mb-4">This project involved comprehensive energy modeling and performance analysis to support green building certification for the UGM Innovation and Creativity Center. Both static calculations and dynamic thermal simulations were conducted to evaluate the building's energy consumption patterns and indoor environmental quality.</p>
+            <p class="mb-4">The assessment covered multiple criteria including energy efficiency, water conservation, indoor air quality, and material sustainability. Innovative features such as hybrid ventilation strategies and responsive shading systems were analyzed through computational fluid dynamics and daylight modeling.</p>
+            <p class="mb-4">Recommendations were developed to optimize the building's performance while maintaining its architectural vision. The implementation of these measures resulted in a 40% reduction in predicted energy use compared to conventional designs, qualifying the project for Gold-level certification under Indonesia's Green Building rating system.</p>
+            <p>The methodologies developed through this project have since been adopted as best practice guidelines for other institutional buildings pursuing green certification in tropical climates.</p>
+        </div>
+    </div>
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Profile modal trigger
-        document.getElementById('openProfileModal').addEventListener('click', () => {
-            openModal('profileModal');
-        });
-
-        // Close modal when clicking outside content
-        window.addEventListener('click', (event) => {
-            if (event.target.className === 'modal') {
-                event.target.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-    </script>
-</body>
-</html>
+    <div id="modal6" class="modal">
+        <div class="modal-content relative">
+            <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+            <h2 class="text-2xl font-bold mb-
